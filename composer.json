@@ -1,0 +1,26 @@
+{
+    "name": "axy/trimdb",
+    "type": "library",
+    "description": "Trimmed a layer of abstraction over the data",
+    "keywords": [
+        "Database"
+    ],
+    "homepage": "https://github.com/axypro/trimdb",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Grigoriev",
+            "email": "go.vasac@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "axy/errors": "~0.0.5",
+        "go/db": "~2.0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "axy\\trimdb\\": ""
+        }
+    }
+}
