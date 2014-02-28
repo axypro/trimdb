@@ -161,7 +161,7 @@ interface IStorage
      *         count of affected rows
      * @throws \axy\trimdb\errors\Query
      */
-    public function deleterByWhere($where);
+    public function deleteByWhere($where);
 
     /**
      * Clears the storage
