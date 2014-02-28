@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple ORM
+ * Trimmed a layer of abstraction over the data
  *
  * @package axy\trimdb
  * @author Oleg Grigoriev <go.vasac@gmail.com>

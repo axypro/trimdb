@@ -100,7 +100,6 @@ abstract class BaseStorage implements IStorage
         throw new NotSupported($this->getCurrentAction(), $this);
     }
 
-
     /**
      * {@inheritdoc}
      */
