@@ -3,7 +3,7 @@
  * @package axy\trimdb
  */
 
-namespace axy\trimdb\test\storages;
+namespace axy\trimdb\tests\storages;
 
 use axy\trimdb\storages\EmptyStorage;
 
@@ -33,17 +33,24 @@ class EmptyStorageTest extends \PHPUnit_Framework_TestCase
     {
         $config = [
             'data' => $this->data,
+            'param' => 'qwerty',
         ];
         $this->storage = new EmptyStorage($config);
     }
 
     /**
      * @covers ::__construct
-     * @covers ::getDB
+     * @covers ::getData
+     * @covers ::getConfig
      */
     public function testCreate()
     {
         $this->assertEquals($this->data, $this->storage->getData());
+        $expected = [
+            'data' => $this->data,
+            'param' => 'qwerty',
+        ];
+        $this->assertEquals($expected, $this->storage->getConfig());
     }
 
     /**

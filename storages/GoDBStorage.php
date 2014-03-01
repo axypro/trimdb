@@ -147,6 +147,16 @@ class GoDBStorage extends BaseStorage
     }
 
     /**
+     * Returns a table instance
+     *
+     * @return \go\DB\Table
+     */
+    public function getTable()
+    {
+        return $this->table;
+    }
+
+    /**
      * @var \go\DB\Table
      */
     protected $table;

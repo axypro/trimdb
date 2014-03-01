@@ -12,6 +12,8 @@ use axy\trimdb\errors\QueryError;
  *
  * Config
  * "data" [optional] - test data (id => row)
+ *
+ * @author Oleg Grigoriev <go.vasac@gmail.com>
  */
 class EmptyStorage extends BaseStorage
 {
@@ -28,6 +30,7 @@ class EmptyStorage extends BaseStorage
         } else {
             $this->data = [];
         }
+        $this->config = $config;
     }
 
     /**
@@ -187,6 +190,14 @@ class EmptyStorage extends BaseStorage
     }
 
     /**
+     * @return array
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
      * @var array
      */
     protected $data;
@@ -195,4 +206,9 @@ class EmptyStorage extends BaseStorage
      * @var int
      */
     protected $maxid = 0;
+
+    /**
+     * @var array
+     */
+    protected $config;
 }

@@ -3,7 +3,7 @@
  * @package axy\trimdb
  */
 
-namespace axy\trimdb\test\storages;
+namespace axy\trimdb\tests\storages;
 
 use axy\trimdb\storages\GoDBStorage;
 use go\DB\DB;
@@ -483,5 +483,15 @@ class GoDBStorageTest extends \PHPUnit_Framework_TestCase
     public function testConfigInvalid()
     {
         return new GoDBStorage([]);
+    }
+
+    /**
+     * @covers ::getTable
+     */
+    public function testGetTable()
+    {
+        $table = $this->storage->getTable();
+        $this->assertInstanceOf('go\DB\Table', $table);
+        $this->assertSame('test', $table->getTableName());
     }
 }
